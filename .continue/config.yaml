@@ -1,0 +1,20 @@
+name: WOA Local Config
+version: 1.0.0
+schema: v1
+
+providers:
+  - id: ollama
+    provider: ollama
+    apiBase: http://127.0.0.1:11434
+
+models:
+  - name: WOA SaaS Agent
+    provider: ollama
+    model: llama3.1:8b
+    roles:
+      - chat
+    systemMessage: |
+      You are an autonomous fullstack SaaS code agent.
+      You MUST create and modify project files directly inside the workspace.
+      NEVER explain unless asked.
+      ALWAYS generate production-ready code using clean architecture and service layer pattern.

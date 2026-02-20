@@ -1,3 +1,11 @@
-import app from "../api/index.js"
+import express from "express";
 
-export default app
+const app = express();
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("WOA TALK API ONLINE 🚀");
+});
+
+export default app;

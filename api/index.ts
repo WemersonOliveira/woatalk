@@ -1,13 +1,3 @@
-import express from "express"
-import cors from "cors"
+import app from "../src/server.js";
 
-const app = express()
-
-app.use(cors())
-app.use(express.json())
-
-app.get("/", (req, res) => {
-  res.send("WOA TALK API ONLINE 🚀")
-})
-
-export default app
+export default app;

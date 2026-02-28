@@ -1,14 +1,14 @@
-import "dotenv/config";
-import express from "express";
+import "dotenv/config"
+import express from "express"
 
-const app = express();
+const app = express()
 
 app.get("/", (req, res) => {
-  res.status(200).send("WOA Talk is live ✅");
-});
+  res.send("WOA Talk API online ✅")
+})
 
 app.get("/ping", (req, res) => {
-  res.status(200).send("pong");
-});
+  res.send("pong")
+})
 
-export default app;
+export default app

@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
-import { communityService } from "../services/community.service";
+import { NextRequest, NextResponse } from "next/server"
+import { communityService } from "../services/community.service"
 
 export async function createPost(request: NextRequest) {
   const { userId, content } = await request.json();
